@@ -1,0 +1,78 @@
+{
+	"name": "maps_agg1401",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "mapa",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 504409489328618
+		},
+		{
+			"eventType": "variable",
+			"name": "ibera",
+			"type": "number",
+			"initialValue": "25",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 210597368949086
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "langu_agg1401"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 570297501567884,
+					"parameters": {
+						"object": "originalmap"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 283802086356151,
+					"parameters": {
+						"layout": "1-1"
+					}
+				}
+			],
+			"sid": 815135832926873
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 555327261649840,
+					"parameters": {
+						"object": "elclassico"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 125591890742302,
+					"parameters": {
+						"layout": "0-1"
+					}
+				}
+			],
+			"sid": 698058787179525
+		}
+	],
+	"sid": 526916534873571
+}

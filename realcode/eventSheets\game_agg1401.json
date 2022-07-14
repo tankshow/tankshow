@@ -1,0 +1,1155 @@
+{
+	"name": "game_agg1401",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "langu_agg1401"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "maps_agg1401"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "globe_agg1401"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 461527178925267,
+					"parameters": {
+						"first-value": "distance(tanku.X, tanku.Y, battle.X, battle.Y)",
+						"comparison": 2,
+						"second-value": "1000"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "battle",
+					"sid": 328244355698681
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "tanku",
+					"sid": 436586171117641
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "easybattle",
+					"sid": 130308544482687,
+					"parameters": {
+						"degrees": "1",
+						"x": "tanku.X",
+						"y": "tanku.Y"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "hardbattle",
+					"sid": 420152723892794,
+					"parameters": {
+						"degrees": "1",
+						"x": "tanku.X",
+						"y": "tanku.Y"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "normalbattle",
+					"sid": 260047577544254,
+					"parameters": {
+						"degrees": "1",
+						"x": "tanku.X",
+						"y": "tanku.Y"
+					}
+				}
+			],
+			"sid": 831216767265455
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 371011846303755,
+					"parameters": {
+						"first-value": "distance(tanku.X, tanku.Y, battle.X, battle.Y)",
+						"comparison": 2,
+						"second-value": "1000"
+					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "battle",
+					"sid": 166114575069938
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "tanku",
+					"sid": 788563265533954,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "easybattle",
+					"sid": 538655699807885,
+					"parameters": {
+						"degrees": "1",
+						"x": "spawn01.X",
+						"y": "spawn01.Y"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "hardbattle",
+					"sid": 438110931334565,
+					"parameters": {
+						"degrees": "1",
+						"x": "spawn2.X",
+						"y": "spawn2.Y"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "normalbattle",
+					"sid": 817468450720139,
+					"parameters": {
+						"degrees": "1",
+						"x": "spawn3.X",
+						"y": "spawn3.Y"
+					}
+				}
+			],
+			"sid": 675579964762693
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 858079296270942,
+					"parameters": {
+						"variable": "aitankspawner",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 362964502970620,
+					"parameters": {
+						"first-value": "battle.Count",
+						"comparison": 3,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 213852259664821,
+					"parameters": {
+						"variable": "ibera",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn01",
+					"sid": 561179285125638,
+					"parameters": {
+						"object": "easybattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 423362271945675,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				}
+			],
+			"sid": 403420332964212
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 751576123900009,
+					"parameters": {
+						"variable": "aitankspawner",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 125660463201185,
+					"parameters": {
+						"first-value": "battle.Count",
+						"comparison": 3,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 741218080233105,
+					"parameters": {
+						"variable": "ibera",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn2",
+					"sid": 980520495912319,
+					"parameters": {
+						"object": "normalbattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 927025149039406,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 538917692095732,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 897560878216323
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 285856697148921,
+					"parameters": {
+						"variable": "aitankspawner",
+						"comparison": 0,
+						"value": "3"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 353858794473999,
+					"parameters": {
+						"first-value": "battle.Count",
+						"comparison": 3,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 767227291920124,
+					"parameters": {
+						"variable": "ibera",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn3",
+					"sid": 644579907080049,
+					"parameters": {
+						"object": "hardbattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 829319365140932,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 176842143563828,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 590119618410773
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 893742456318633,
+					"parameters": {
+						"variable": "aitankspawner",
+						"comparison": 0,
+						"value": "4"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 810075854400886,
+					"parameters": {
+						"first-value": "battle.Count",
+						"comparison": 3,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 835887382755132,
+					"parameters": {
+						"variable": "ibera",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 453153345172574,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 632780993162140,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 379636453252082
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 862692783154676,
+					"parameters": {
+						"variable": "aitankspawner",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 481098984628458,
+					"parameters": {
+						"first-value": "battle.Count",
+						"comparison": 3,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 163094709340017,
+					"parameters": {
+						"variable": "ibera",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 405457315405657,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 351429790253701,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "choose(1, 2, 3)"
+					}
+				}
+			],
+			"sid": 165578517124191
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 501683642988724,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 189701502376723,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "1.0"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 585446219575513,
+					"parameters": {
+						"first-value": "tankugun.Count",
+						"comparison": 1,
+						"second-value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "tanku",
+					"sid": 761624926249099,
+					"parameters": {
+						"object": "tankugun",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 274534581714029
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "tankugun",
+					"sid": 660583142940443,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "tankugun",
+					"sid": 135942241231067
+				}
+			],
+			"sid": 395987362641971
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "tankugun",
+					"sid": 245401058547524,
+					"parameters": {
+						"object": "deutet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "deutet",
+					"sid": 292059686782758
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tankugun",
+					"sid": 772481645620220
+				}
+			],
+			"sid": 785269329927870
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "tankugun",
+					"sid": 695055876533902,
+					"parameters": {
+						"object": "deutet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "aigun",
+					"sid": 801950939032106
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tankugun",
+					"sid": 244724841007576
+				}
+			],
+			"sid": 717603301719260
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "aigun",
+					"sid": 835968857899662,
+					"parameters": {
+						"object": "tanku"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 224518056553180,
+					"parameters": {
+						"variable": "lifestring",
+						"comparison": 4,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "tanku",
+					"sid": 154766412925221
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tankugun",
+					"sid": 460325062091072
+				},
+				{
+					"id": "destroy",
+					"objectClass": "aigun",
+					"sid": 861228468407145
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 479845843120674,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "p1spawn",
+					"sid": 812636856743581,
+					"parameters": {
+						"object": "tanku",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 839719387143651,
+					"parameters": {
+						"variable": "lifestring",
+						"value": "-1"
+					}
+				}
+			],
+			"sid": 163281788843036
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "aigun",
+					"sid": 537766312251726,
+					"parameters": {
+						"object": "tanku"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 227619119967299,
+					"parameters": {
+						"variable": "lifestring",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 487715388050832,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 535642336938112
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "tankugun",
+					"sid": 190832173583491,
+					"parameters": {
+						"object": "battle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 758449953762083,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "battle",
+					"sid": 322929303952157
+				},
+				{
+					"id": "destroy",
+					"objectClass": "tankugun",
+					"sid": 257219815053503
+				}
+			],
+			"sid": 220251622602865
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "aigun",
+					"sid": 816028699846533,
+					"parameters": {
+						"object": "deutet"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "deutet",
+					"sid": 770782802751437
+				},
+				{
+					"id": "destroy",
+					"objectClass": "aigun",
+					"sid": 501809303604947
+				}
+			],
+			"sid": 909858840934855
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 668797966920553
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "p1spawn",
+					"sid": 146993747548819,
+					"parameters": {
+						"object": "tanku",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "tanku",
+					"sid": 330789978028938,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-default-controls",
+					"objectClass": "tanku",
+					"sid": 943436206398683,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"default-controls": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "copy",
+					"sid": 451497398060119,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "logo",
+					"sid": 661739925663282,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "www",
+					"sid": 688239331558805,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "www2",
+					"sid": 191314687168783,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "copy",
+					"sid": 905770235914417,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "version",
+					"sid": 823961482430436,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn01",
+					"sid": 514577606107212,
+					"parameters": {
+						"object": "easybattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 577742933689599,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 369798733251092,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn2",
+					"sid": 387447442769396,
+					"parameters": {
+						"object": "normalbattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 147748279747931,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 111977984503251,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "1"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawn3",
+					"sid": 498832831661730,
+					"parameters": {
+						"object": "hardbattle",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 250506957725684,
+					"parameters": {
+						"variable": "ibera",
+						"value": "-1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 952509782362357,
+					"parameters": {
+						"variable": "aitankspawner",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 723038391959577
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "tanku",
+					"sid": 473921577509409,
+					"behaviorType": "8Direction"
+				}
+			],
+			"actions": [
+				{
+					"id": "start-animation",
+					"objectClass": "tanku",
+					"sid": 386662966250659,
+					"parameters": {
+						"from": "current-frame"
+					}
+				}
+			],
+			"sid": 761634649276329
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "tanku",
+					"sid": 423520610520328,
+					"behaviorType": "8Direction",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "tanku",
+					"sid": 910442391023160
+				}
+			],
+			"sid": 474713259820314
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "leaf",
+					"sid": 605037907762823,
+					"parameters": {
+						"object": "tanku"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "leaf",
+					"sid": 121260512982766,
+					"parameters": {
+						"opacity": "50"
+					}
+				}
+			],
+			"sid": 285403779528645,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "ice",
+					"sid": 665260462750759,
+					"parameters": {
+						"object": "tanku"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "tanku",
+					"sid": 641910672755707,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"max-speed": "175"
+					}
+				}
+			],
+			"sid": 144802306987543,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "leaf",
+					"sid": 660745309315712,
+					"parameters": {
+						"object": "tanku"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "leaf",
+					"sid": 365986288675589,
+					"parameters": {
+						"opacity": "100"
+					}
+				}
+			],
+			"sid": 452380264152271,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "ice",
+					"sid": 987681860895007,
+					"parameters": {
+						"object": "tanku"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "tanku",
+					"sid": 428338394179680,
+					"behaviorType": "8Direction",
+					"parameters": {
+						"max-speed": "200"
+					}
+				}
+			],
+			"sid": 998064071480660,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 167632191159810,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "1.0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 394032577435232,
+					"parameters": {
+						"interval-seconds": "2.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "easybattle",
+					"sid": 970288215047464,
+					"parameters": {
+						"object": "aigun",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 205178168620361
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 201203619823203,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "1.0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 991735651162923,
+					"parameters": {
+						"interval-seconds": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "normalbattle",
+					"sid": 915364010513570,
+					"parameters": {
+						"object": "aigun",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 956586588786818
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-time",
+					"objectClass": "System",
+					"sid": 292289699296795,
+					"parameters": {
+						"comparison": 0,
+						"time-seconds": "1.0"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 873667431054626,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "hardbattle",
+					"sid": 575470220318787,
+					"parameters": {
+						"object": "aigun",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 619359877180900
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 597684397668061
+		}
+	],
+	"sid": 272342252601019
+}

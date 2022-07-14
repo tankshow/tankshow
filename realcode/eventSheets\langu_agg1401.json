@@ -1,0 +1,318 @@
+{
+	"name": "langu_agg1401",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 981638195699842,
+					"parameters": {
+						"object": "turkish"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 310354771823386,
+					"parameters": {
+						"variable": "language",
+						"value": "1"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 962064407045212,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 518324660428336
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 974109254324170,
+					"parameters": {
+						"object": "english"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 114793169739210,
+					"parameters": {
+						"variable": "language",
+						"value": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 745937426866580,
+					"parameters": {
+						"layout": "menu"
+					}
+				}
+			],
+			"sid": 967384599558610
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 741115104778880
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 163965215352389,
+					"parameters": {
+						"variable": "language",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "oyna",
+					"sid": 407119685225706,
+					"parameters": {
+						"text": "\"OYUNA BAŞLA\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "OZEL",
+					"sid": 957519132371222,
+					"parameters": {
+						"text": "\"ÖZELLEŞTİR\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "tekrarla",
+					"sid": 780121901880669,
+					"parameters": {
+						"text": "\"TEKRAR YÜKLE\""
+					}
+				}
+			],
+			"sid": 315548057277718
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 164607600812230,
+					"parameters": {
+						"variable": "language",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 482783041348832,
+					"parameters": {
+						"interval-seconds": "dt"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "can",
+					"sid": 135504834928472,
+					"parameters": {
+						"text": "\"1O: x\" &  lifestring"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ai",
+					"sid": 135630662745265,
+					"parameters": {
+						"text": "\"HEDEF: \" &  ibera"
+					}
+				}
+			],
+			"sid": 635920061343285
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 679276564920838,
+					"parameters": {
+						"variable": "language",
+						"comparison": 0,
+						"value": "2"
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 150359677948441,
+					"parameters": {
+						"interval-seconds": "dt"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "ai",
+					"sid": 492261606477460,
+					"parameters": {
+						"text": "\"Hedef: \" &  ibera"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "can",
+					"sid": 558158757429925,
+					"parameters": {
+						"text": "\"GOAL: \" &  ibera"
+					}
+				}
+			],
+			"sid": 170967798679557
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 173503776776361
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 183833870886312,
+					"parameters": {
+						"variable": "language",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "oyna",
+					"sid": 940828761075767,
+					"parameters": {
+						"text": "\"PLAY GAME\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "OZEL",
+					"sid": 292655437917826,
+					"parameters": {
+						"text": "\"CUSTOMIZE\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "tekrarla",
+					"sid": 507889888404833,
+					"parameters": {
+						"text": "\"RESET GAME\""
+					}
+				}
+			],
+			"sid": 638468612018853
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "copy",
+					"sid": 484840713037672,
+					"isInverted": true
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "wall",
+					"sid": 896004394030579,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "copy",
+					"sid": 715130510623146,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "logo",
+					"sid": 809711601850151,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "www",
+					"sid": 852087603815441,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "www2",
+					"sid": 569319999823056,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "copy",
+					"sid": 460305627100053,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "version",
+					"sid": 851903201184710,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 266769300744569
+		}
+	],
+	"sid": 530084664024284
+}

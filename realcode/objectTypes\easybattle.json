@@ -1,0 +1,100 @@
+{
+	"name": "easybattle",
+	"plugin-id": "Sprite",
+	"sid": 943240030612202,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 195282346198554
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 754367752598716
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 154175,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.72,
+								0.3076923076923077,
+								0.9866666666666667,
+								0.5,
+								0.72,
+								0.676923076923077,
+								0.5,
+								0.9846153846153847,
+								0,
+								0.9846153846153847,
+								0.06666666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 647602,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.72,
+								0.3076923076923077,
+								0.9866666666666667,
+								0.5,
+								0.72,
+								0.676923076923077,
+								0.5,
+								0.9846153846153847,
+								0,
+								0.9846153846153847,
+								0.06666666666666667,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 257871067361702,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

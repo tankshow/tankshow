@@ -1,0 +1,38 @@
+{
+	"name": "menu_agg1401",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "langu_agg1401"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "maps_agg1401"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 415564400898402,
+					"parameters": {
+						"object": "oyna"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 550611773256876,
+					"parameters": {
+						"layout": "maps"
+					}
+				}
+			],
+			"sid": 597566194870447
+		}
+	],
+	"sid": 601211893913415
+}

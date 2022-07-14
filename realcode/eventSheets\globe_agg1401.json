@@ -1,0 +1,40 @@
+{
+	"name": "globe_agg1401",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "lifestring",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 880430118106258
+		},
+		{
+			"eventType": "variable",
+			"name": "language",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 815757871270100
+		},
+		{
+			"eventType": "variable",
+			"name": "aitankspawner",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 322567049283768
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "game_agg1401"
+		}
+	],
+	"sid": 145528234415236
+}

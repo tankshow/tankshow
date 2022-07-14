@@ -1,0 +1,13 @@
+{
+	"name": "battle",
+	"plugin-id": "Sprite",
+	"sid": 961821082780010,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"easybattle",
+		"normalbattle",
+		"hardbattle"
+	]
+}

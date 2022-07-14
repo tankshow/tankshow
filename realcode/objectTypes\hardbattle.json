@@ -1,0 +1,100 @@
+{
+	"name": "hardbattle",
+	"plugin-id": "Sprite",
+	"sid": 294929807327218,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 797757321822142
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 377363854958896
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4135523,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.7866666666666666,
+								0.23076923076923078,
+								0.9866666666666667,
+								0.5,
+								0.7866666666666666,
+								0.7538461538461538,
+								0.5,
+								0.9846153846153847,
+								0,
+								0.9846153846153847,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 65,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1344425,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.7866666666666666,
+								0.23076923076923078,
+								0.9866666666666667,
+								0.5,
+								0.7866666666666666,
+								0.7538461538461538,
+								0.5,
+								0.9846153846153847,
+								0,
+								0.9846153846153847,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 690913323444352,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
